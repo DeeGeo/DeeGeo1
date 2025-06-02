@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Mobile Applications | Dee Geo Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Apps page specific styles */
+    .apps-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .apps-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+    
+    .app-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .app-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .app-icon {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .app-info {
+      padding: 20px;
+    }
+    
+    .app-title {
+      margin: 0 0 10px;
+      color: #0066ff;
+    }
+    
+    .app-description {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .app-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0066ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    
+    .app-link:hover {
+      background: #0052cc;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 40px;
+      color: #0066ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+    }
+    
+    .back-link:hover {
+      transform: translateX(-5px);
+    }
+    
+    .coming-soon {
+      position: relative;
+      opacity: 0.9;
+    }
+    
+    .coming-soon::after {
+      content: "Coming Soon";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff6b00;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header class="apps-header">
+    <div class="container">
+      <h1>Our Applications</h1>
+      <p>Quality mobile apps designed to enhance your daily life</p>
+    </div>
+  </header>
+  
+  <main class="apps-container">
+    <div class="apps-grid">
+      <!-- Blink Bright Flashlight -->
+      <div class="app-card">
+        <img src="images/app_icon.png" alt="Blink Bright Flashlight" class="app-icon">
+        <div class="app-info">
+          <h3 class="app-title">Blink Bright Flashlight</h3>
+          <p class="app-description">Feature-packed flashlight app with strobe, SOS, and music sync modes. Perfect for emergencies and everyday use.</p>
+          <a href="flashlight.html" class="app-link">View Details</a>
+        </div>
+      </div>
+      
+      <!-- App 2 (Placeholder) -->
+      <div class="app-card coming-soon">
+        <img src="images/placeholder-app1.jpg" alt="Coming Soon" class="app-icon">
+        <div class="app-info">
+          <h3 class="app-title">Battery Saver Pro</h3>
+          <p class="app-description">Intelligent battery optimization to extend your device's battery life significantly.</p>
+          <a href="#" class="app-link" style="background: #ccc;">Coming Soon</a>
+        </div>
+      </div>
+      
+      <!-- App 3 (Placeholder) -->
+      <div class="app-card coming-soon">
+        <img src="images/placeholder-app2.jpg" alt="Coming Soon" class="app-icon">
+        <div class="app-info">
+          <h3 class="app-title">File Master Explorer</h3>
+          <p class="app-description">Powerful file manager with cloud integration and advanced organization features.</p>
+          <a href="#" class="app-link" style="background: #ccc;">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+    
+    <a href="index.html" class="back-link">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+  </main>
+  
+  <footer class="apps-footer">
+    <div class="container">
+      <p>&copy; 2023 Dee Geo Developer. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

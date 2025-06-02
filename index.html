@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dee Geo Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Help Center specific styles */
+    :root {
+      --primary: #0066ff;
+      --secondary: #0052cc;
+      --light-bg: #f8f9fa;
+      --dark-text: #2d3748;
+      --header-bg: linear-gradient(90deg, #0066ff, #004bb5);
+    }
+    
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      margin: 0;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+      background: var(--light-bg);
+    }
+    
+    .help-header {
+      background: var(--header-bg);
+      padding: 1.5rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      color: white;
+      text-align: center;
+    }
+    
+    .header-container h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+    
+    .search-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 1rem auto 0;
+      position: relative;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 12px 20px;
+      padding-left: 45px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      outline: none;
+    }
+    
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #004bb5;
+    }
+    
+    .help-main {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    
+    .help-sidebar {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      height: fit-content;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .help-content {
+      flex: 1;
+    }
+    
+    .category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .category-item {
+      margin-bottom: 10px;
+    }
+    
+    .category-link {
+      display: block;
+      padding: 12px 15px;
+      color: var(--dark-text);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    
+    .category-link:hover, .category-link.active {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .welcome-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      .help-main {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+      }
+      
+      .help-sidebar {
+        order: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="help-header">
+    <div class="header-container">
+      <h1>Dee Geo Developer</h1>
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input id="searchInput" type="text" class="search-input" placeholder="Search for apps..." />
+      </div>
+    </div>
+  </header>
+
+  <main class="help-main">
+    <aside class="help-sidebar">
+      <h2><i class="fas fa-list-alt"></i> Categories</h2>
+      <ul class="category-list">
+        <li class="category-item"><a href="our-apps.html" class="category-link active"><i class="fas fa-mobile-alt"></i> Our Apps</a></li>
+        <li class="category-item"><a href="about-us.html" class="category-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li class="category-item"><a href="contact.html" class="category-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      </ul>
+    </aside>
+
+    <section class="help-content">
+      <div class="welcome-card">
+        <h2>Welcome to our Help Center</h2>
+        <p>Find answers to common questions, troubleshoot issues, or learn how to get the most out of our apps.</p>
+        <p>Click "Our Apps" to explore help topics related to your specific application.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="help-footer" style="background:#2d3748; color:#fff; text-align:center; padding:20px; margin-top:40px;">
+    <p>&copy; 2025 Dee Geo Developer. All rights reserved.</p>
+    <div>
+      <a href="privacy.html" style="color:#a0aec0; text-decoration:none;">Privacy Policy</a> | 
+      <a href="terms.html" style="color:#a0aec0; text-decoration:none;">Terms of Service</a> | 
+      <a href="contact.html" style="color:#a0aec0; text-decoration:none;">Contact Us</a>
+    </div>
+  </footer>
+
+  <script>
+    const apps = [
+      "Blink Bright Flashlight",
+      "DJ Blink Music Player",
+      "Quick PDF Splitter",
+      "City Car Simulator",
+      "Flashlight Pro"
+    ];
+
+    const searchInput = document.getElementById('searchInput');
+
+    searchInput.addEventListener('keydown', function(event) {
+      if(event.key === 'Enter') {
+        const query = searchInput.value.trim().toLowerCase();
+        if(!query) return;
+
+        const results = apps.filter(app => app.toLowerCase().includes(query));
+        if(results.length === 0) {
+          alert('No apps found matching "' + searchInput.value + '"');
+        } else {
+          alert('Apps found:\n' + results.join('\n'));
+        }
+      }
+    });
+  </script>
+</body>
+</html>

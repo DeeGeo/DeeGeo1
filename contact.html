@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Dee Geo Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #0066ff;
+      --light-bg: #f8f9fa;
+      --dark-text: #2d3748;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--light-bg);
+      margin: 0;
+      padding: 40px 20px;
+      color: var(--dark-text);
+    }
+
+    .contact-wrapper {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-wrapper h2 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .contact-wrapper p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      display: inline-block;
+      width: 100%;
+      background-color: var(--primary);
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004ecb;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-link a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-wrapper">
+    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <p>Have a question or feedback? Send us a message.</p>
+
+    <form action="send-message.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="back-link">
+      <p><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Help Center</a></p>
+    </div>
+  </div>
+</body>
+</html>

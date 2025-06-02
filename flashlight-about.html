@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Blink Bright Flashlight</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* About page specific styles */
+    .about-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .feature-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      font-size: 2rem;
+      color: #0066ff;
+      margin-bottom: 10px;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #0066ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    
+    .back-link:hover {
+      background: #0052cc;
+    }
+    
+    .back-link i {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <h1>About Blink Bright Flashlight</h1>
+  </header>
+  
+  <main class="about-container">
+    <section class="intro">
+      <p class="lead">Blink Bright is the most versatile flashlight app, designed to be user-friendly while offering powerful features for all situations.</p>
+    </section>
+    
+    <section class="features">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Flash Light</h3>
+          <p>Powerful adjustable brightness with smooth controls for everyday use</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-battery-three-quarters"></i>
+          </div>
+          <h3>Battery Indicator</h3>
+          <p>Real-time battery level monitoring with usage estimates</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-flash"></i>
+          </div>
+          <h3>Blink Flash Light</h3>
+          <p>Customizable blinking patterns for signals and alerts</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Beat Detection Light</h3>
+          <p>Light synchronizes to music rhythm and ambient sounds</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="design">
+      <h2>Thoughtful Design</h2>
+      <ul>
+        <li><strong>One-tap access</strong> from any screen</li>
+        <li><strong>Adjustable brightness</strong> with smooth slider control</li>
+        <li><strong>Battery-efficient</strong> operation</li>
+        <li><strong>Dark mode</strong> friendly interface</li>
+      </ul>
+    </section>
+    
+    <a href="flashlight.html" class="back-link">
+      <i class="fas fa-arrow-left"></i> Back to App
+    </a>
+  </main>
+  
+  <footer class="page-footer">
+    <p>© 2023 Blink Bright Flashlight | Version 2.1.0</p>
+  </footer>
+</body>
+</html>
